@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django Builder</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body class="container mt-5">
+    <h2 class="mb-4">Django Builder</h2>
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="app_name">Application Name:</label>
+            <input type="text" class="form-control" name="app_name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="project_name">Project Name:</label>
+            <input type="text" class="form-control" name="project_name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="database_model">Database Model:</label>
+            <input type="text" class="form-control" name="database_model" required>
+        </div>
+
+        <div class="form-group">
+            <label for="fields">Fields (comma-separated):</label>
+            <input type="text" class="form-control" name="fields" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Generate Code</button>
+    </form>
+</body>
+</html>
